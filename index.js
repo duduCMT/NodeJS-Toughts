@@ -6,6 +6,9 @@ const FileStore = require('session-file-store')(session)
 
 const { port } = require('./config')
 const conn = require('./db/conn')
+const models = require('./models')
+const toughtsRoutes = require('./routes/toughtsRoutes')
+const ToughtController = require('./controllers/ToughtController')
 
 const app = express()
 
@@ -46,7 +49,10 @@ app.use((req, res, next) => {
   next()
 })
 
-conn.sync()
+app.use('/toughts', toughtsRoutes)
+app.use('/', ToughtController.showToughts)
+
+conn.sync({ force: false })
   .then(() => {
     app.listen(port, () => console.log(`Servidor rodando na porta ${port}`))
   })
