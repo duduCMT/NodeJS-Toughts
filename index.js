@@ -7,8 +7,9 @@ const FileStore = require('session-file-store')(session)
 const { port } = require('./config')
 const conn = require('./db/conn')
 const models = require('./models')
-const toughtsRoutes = require('./routes/toughtsRoutes')
 const ToughtController = require('./controllers/ToughtController')
+const toughtsRoutes = require('./routes/toughtsRoutes')
+const authRoutes = require('./routes/authRoutes')
 
 const app = express()
 
@@ -50,6 +51,7 @@ app.use((req, res, next) => {
 })
 
 app.use('/toughts', toughtsRoutes)
+app.use('/', authRoutes)
 app.use('/', ToughtController.showToughts)
 
 conn.sync({ force: false })
