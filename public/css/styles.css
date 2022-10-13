@@ -62,6 +62,11 @@ body {
   color: white;
   border: 1px solid #e52a2a;
 }
+.message.success {
+  background-color: #2fb028;
+  color: white;
+  border: 1px solid #30b828;
+}
 
 
 /* LOGIN E REGISTER */
