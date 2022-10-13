@@ -45,6 +45,71 @@ body {
   padding: 2rem;
 }
 
+/* LOGIN E REGISTER */
+.auth-container {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #151515;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.auth-container h2 {
+  font-size: 1.5rem;
+  padding-left: .5rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid #F6982d;
+}
+
+.auth-container a {
+  color: #F6982d;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-control label {
+  margin-bottom: .6rem;
+}
+
+.form-control input,
+.form-control textarea {
+  padding: .5rem;
+  border-radius: 4px;
+  border: 0;
+  background-color: #222;
+}
+
+form input[type='submit'], .btn {
+  background-color: transparent;
+  color: #F6982d;
+  border: 2px solid #F6982d;
+  padding: .5rem 1.2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: .3s;
+}
+
+form input[type='submit']:hover, 
+.btn:hover {
+  background-color: #F6982d;
+  color: white;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem; 
+}
+
 /* FOOTER */
 footer {
   height: 150px;
