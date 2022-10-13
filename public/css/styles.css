@@ -45,6 +45,25 @@ body {
   padding: 2rem;
 }
 
+/* MESSAGES */
+.message {
+  padding: .8rem;
+  color: #004085;
+  background-color: #cce5ff;
+  border: 1px solid #b8daff;
+  border-radius: 4px;
+  text-align: center;
+  margin: 0 auto 1rem;
+  max-width: 480px;
+}
+
+.message.error {
+  background-color: #f33838;
+  color: white;
+  border: 1px solid #e52a2a;
+}
+
+
 /* LOGIN E REGISTER */
 .auth-container {
   max-width: 480px;
