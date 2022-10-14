@@ -9,4 +9,8 @@ module.exports = class ToughtController {
   static async dashboard(req, res){
     res.render('toughts/dashboard')
   }
+
+  static async createTought(req, res){
+    res.render('toughts/create')
+  }
 }
