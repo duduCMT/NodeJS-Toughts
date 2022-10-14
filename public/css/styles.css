@@ -168,7 +168,62 @@ form input[type='submit']:hover,
   justify-content: flex-end;
 }
 
+/* DASHBOARD */
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
 
+.title-container h2 {
+  font-size: 1.2rem;
+  padding-left: .5rem;
+  border-left: 4px solid #F6982d;  
+}
+
+.dashboard {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.dashboard h3 {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard ul {
+  list-style: none;
+}
+
+.dashboard li {
+  border-left: 3px solid #F6982d;  
+  background-color: #151515;
+  border-radius: 8px;
+  padding: 1.5rem; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.dashboard .label {
+  font-size: 1.2rem;
+}
+
+.dashboard .actions {
+  display: flex;
+}
+
+.dashboard .actions .btn {
+  color: #FFF;
+  border-color: #FFF;
+  margin-right: .8rem;
+}
+
+.dashboard .actions .btn:hover {
+  border-color: #F6982d;
+}
 
 /* FOOTER */
 footer {
