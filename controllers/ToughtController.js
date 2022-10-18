@@ -22,7 +22,9 @@ module.exports = class ToughtController {
 
     const toughts = user.Toughts.map((result) => result.dataValues)
 
-    res.render('toughts/dashboard', { toughts })
+    let emptyToughts = toughts.length === 0
+
+    res.render('toughts/dashboard', { toughts, emptyToughts })
   }
 
   static async createTought(req, res){
@@ -46,6 +48,24 @@ module.exports = class ToughtController {
       })
     } catch(err) {
       console.log(err)
+    }
+  }
+
+  static async removeTought(req, res) {
+    const { id } = req.body
+    const { userid } = req.session
+    
+    try {
+      await Tought.destroy({where: {id: id, UserId: userid}})
+      
+      req.flash('message', 'Pensamento removido com sucesso.')
+      req.flash('messageClass', 'success')
+      
+      req.session.save(() => {
+        res.redirect('/toughts/dashboard') 
+      })
+    } catch(err) {
+      console.log(err)   
     }
   }
 }

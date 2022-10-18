@@ -172,7 +172,7 @@ form input[type='submit']:hover,
 .title-container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   align-items: center;
 }
 
@@ -223,6 +223,18 @@ form input[type='submit']:hover,
 
 .dashboard .actions .btn:hover {
   border-color: #F6982d;
+}
+
+.dashboard .empty-toughts-message {
+  text-align: center;
+  margin-top: 1rem;
+  background-color: #151515;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.dashboard .empty-toughts-message a {
+  color: #f6982d;
 }
 
 /* FOOTER */
