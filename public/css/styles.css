@@ -237,6 +237,110 @@ form input[type='submit']:hover,
   color: #f6982d;
 }
 
+/* HOME */
+.home-header {
+  display: flex;
+  flex-direction: column;
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #151515;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.home-header h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.home-header span {
+  color: #F6982d;
+}
+
+.home-input-search {
+  background-color: #222;
+  display: flex;
+  border-radius: 4px;
+  margin-bottom: .8rem;
+}
+
+.home-input-search .btn {
+  flex: 1;
+}
+
+.home-input-search input {
+  border: none;
+  padding: .5rem;
+  background-color: transparent;
+  flex: 8;
+}
+
+.order-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.order-container form {
+  margin: 0;
+}
+
+.order-container button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+}
+
+.order-container span {
+  margin-right: 4px;
+}
+
+.order-container i {
+  width: 100%;
+  height: 100%;
+}
+
+.order-container button,
+.order-container i,
+.order-container a {
+  margin: 0 2px;
+  padding: 4px 2px;
+  border-radius: 4px;
+  background-color: #222;
+}
+
+.order-container a {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.toughts-container figure {
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #151515;
+  max-width: 560px;
+  margin: 0 auto 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.toughts-container blockquote {
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+
+.toughts-container figcaption {
+  align-self: flex-end;
+}
+
+.toughts-container span {
+  color: #F6982d;
+}
+
+
 /* FOOTER */
 footer {
   height: 150px;
