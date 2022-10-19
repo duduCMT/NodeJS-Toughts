@@ -6,12 +6,23 @@ const { Op } = require('sequelize')
 module.exports = class ToughtController {
   static async showToughts(req, res){
     let search = req.query.search || ''
+    let order = 'DESC'
+
+    switch(req.query.order) {
+      case 'old':
+        order = 'ASC'
+        break;
+      case 'new':
+        order = 'DESC'  
+        break ;
+    }
 
     const toughtsData = await Tought.findAll({
       include: User,
       where: {
         title: {[Op.like]: `%${search}%`}
-      }
+      },
+      order: [['createdAt', order]]
     })
 
     const toughts = toughtsData.map(result => result.get({plain: true}))
