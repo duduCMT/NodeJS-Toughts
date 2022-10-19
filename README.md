@@ -1,9 +1,9 @@
 # Node.JS Toughts
 
-## Observação
-*Melhorar README para publicação do projeto no Git*
+## Descrição
+Projeto para prática e aprendizado de técnicas básicas de desenvolvimento para aplicações web simples com NodeJS, Handlebars e Sequelize (MySQL). 
 
-## Anotações
+## Execução
 1. Execute ```npm install``` para instalar os pacotes
 2. Crie um banco de dados mysql localmente chamado *nodetoughts*
 3. Configure um arquivo .env seguindo o .env.exemple
