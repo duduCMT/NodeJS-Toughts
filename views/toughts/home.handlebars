@@ -1,6 +1,6 @@
 <div class="home-header">
   <form action="/" method="get" class="home-input-search">
-    <input type="text" name="search" placeholder="Está buscando por algo?">
+    <input type="text" name="search" placeholder="Está buscando por algo?" value="{{this.search}}">
     <input type="submit" class="btn" value="Buscar">
   </form>
   <div class="order-container">
@@ -22,6 +22,19 @@
     <a href="/" class="clear">Limpar</a>
   </div>
 </div>
+
+<div class="search-title-container">
+  {{#if search}}
+    <h1>Resultados da busca: </h1>
+    <span>{{toughtsQty}}</span>
+  {{else}}
+    <h1>Conheça alguns pensamentos:</h1>
+  {{/if}}
+</div>
+
+{{#if hasToughts}}
+  <p class="toughts-message">Não temos nenhum pensamento para você no momento :(</p>
+{{/if}}
 
 <div class="toughts-container">
   {{#each toughts}}

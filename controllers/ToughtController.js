@@ -1,15 +1,24 @@
 const Tought = require('../models/Tought')
 const User = require('../models/User')
 
+const { Op } = require('sequelize')
+
 module.exports = class ToughtController {
   static async showToughts(req, res){
+    let search = req.query.search || ''
+
     const toughtsData = await Tought.findAll({
       include: User,
+      where: {
+        title: {[Op.like]: `%${search}%`}
+      }
     })
 
     const toughts = toughtsData.map(result => result.get({plain: true}))
+    const toughtsQty = toughts.length === 1 ? `${toughts.length} pensamento` : `${toughts.length} pensamentos`
+    const hasToughts = toughts.length === 0
 
-    res.render('toughts/home', { toughts })
+    res.render('toughts/home', { toughts, search, toughtsQty, hasToughts })
   }
   
   static async dashboard(req, res){

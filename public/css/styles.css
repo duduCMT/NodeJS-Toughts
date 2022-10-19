@@ -247,7 +247,7 @@ form input[type='submit']:hover,
   background-color: #151515;
   border-radius: 8px;
   padding: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .home-header h1 {
@@ -340,6 +340,33 @@ form input[type='submit']:hover,
   color: #F6982d;
 }
 
+.search-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 560px; 
+  margin: 0 auto 1.2rem;
+}
+
+.search-title-container h1 {
+  padding: 4px;
+  border-bottom: 2px solid #F6982d;
+}
+
+.search-title-container span {
+  padding: 6px;
+  background-color: #151515;
+  font-size: .8rem;
+  height: max-content;
+  border-radius: 4px;
+}
+
+.toughts-message {
+  max-width: 560px; 
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem;
+}
 
 /* FOOTER */
 footer {
